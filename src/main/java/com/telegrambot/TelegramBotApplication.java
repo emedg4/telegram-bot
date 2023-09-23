@@ -13,11 +13,13 @@ public class TelegramBotApplication {
 
 	public static void main(String[] args) throws TelegramApiException {
 		TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+		System.out.println("Empezo el flujo en la linea 116 del main");
+
 		try {
 			botsApi.registerBot(new BotService());
 
 		} catch (Exception e) {
-			System.out.println("lkqjdlkwqd");
+			System.out.println(e);
 		}
 		SpringApplication.run(TelegramBotApplication.class, args);
 	}

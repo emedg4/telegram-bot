@@ -1,0 +1,9 @@
+version: '3'
+services:
+  java-builder:
+    build:
+      context: .
+    ports:
+      - "8080:8000"
+    volumes:
+      - .:/app
