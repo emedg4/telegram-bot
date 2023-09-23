@@ -14,13 +14,17 @@ public class BotService extends TelegramLongPollingBot  {
   
     @Override
     public String getBotToken() {
-        String token = "6649188676:AAE1l1U5wWTD3f-nmgRkIKDxdcpSRClGMMM";
+        String token = "6649188676:AAF6zBxqwIwJ7AupTPzeHNWE4SgxRfQmj10";
         return token;
     }
   
     @Override
     public void onUpdateReceived(Update update) {
-        System.out.println(update);
+        var msg = update.getMessage();
+        var user = msg.getFrom();
+
+        System.out.println(msg);
+  
         return;
     }
   
